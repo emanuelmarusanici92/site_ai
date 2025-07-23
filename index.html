@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofoliu AI</title>
+  <link rel="icon" href="eIAM.jpg" type="image/png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #AA5577 url('carbon-fibre-big.png');
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 90vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #FFFEF2;
+      border: 4px solid #000000;
+      border-radius: 35px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000000;
+      padding: 10px 20px;
+      border-bottom: 4px solid #AA5577;
+      border-radius: 30px 30px 0 0;
+    }
+
+    header img {
+      width: 250px;
+      height: 125px;
+      mask-image: linear-gradient(to right, transparent 0%, black 15%, black 80%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 80%, transparent 100%);
+    }
+	
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+}
+
+nav li {
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+nav li.active,
+nav li:hover {
+  background: linear-gradient(135deg, #AA5577 0%, #ff99cc 100%);
+  color: #000;
+  box-shadow: 0 0 10px #ff99cc, 0 0 20px #AA5577;
+  transform: scale(1.05);
+}
+
+nav li.active::after {
+  content: "";
+  display: block;
+  margin-top: 4px;
+  height: 3px;
+  background: #ff99cc;
+  border-radius: 2px;
+}
+
+    main {
+      flex-grow: 1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    main p {
+      padding: 20px 20px;
+      text-align: justify;
+      text-indent: 20px;
+    }
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.slider-track {
+  display: flex;
+  width: 600%; /* pentru 6 imagini (3 + 3 duplicate) */
+  animation: slide 12s linear infinite;
+}
+
+.slider-track img {
+  width: 16.6666%; /* 100% / 6 imagini */
+  height: 150px;
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* mută jumătate din lățime */
+  }
+}
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 1800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+
+    footer {
+      background: #000000;
+      padding: 20px;
+      border-radius: 0 0 30px 30px;
+      text-align: center;
+      border-top: 4px solid #AA5577;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #FFFFFF;
+      font-weight: bold;
+    }
+
+    footer img {
+      filter: invert(100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="eIAM.jpg" alt="Logo AI">
+      <nav>
+        <ul id="nav-menu">
+          <a href="index.html" target="_self">
+            <li class="active" data-page="acasa">Acasa</li>
+          </a>
+          <a href="despre.html" target="_self">
+            <li data-page="despre">Despre</li>
+          </a>
+          <a href="proiecte.html" target="_self">
+            <li data-page="proiecte">Proiecte</li>
+          </a>
+          <a href="contact.html" target="_self">
+            <li data-page="contact">Contact</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="slider">
+        <div class="slider-track">
+          <img src="prj_suno_audio_leonardo_img_cover.jpeg" alt="Proiect Audio Creativ AI">
+          <img src="prj_dall-e_warrior_img_cover.jpeg" alt="Proiect Video Creativ AI">
+          <img src="prj_chatgpt_text_creativ_2142_year_leonardo_img_cover.jpeg" alt="Proiect Text Creativ AI">
+          <img src="prj_suno_audio_leonardo_img_cover.jpeg" alt="Proiect Audio Creativ AI">
+          <img src="prj_dall-e_warrior_img_cover.jpeg" alt="Proiect Video Creativ AI">
+          <img src="prj_chatgpt_text_creativ_2142_year_leonardo_img_cover.jpeg" alt="Proiect Text Creativ AI">
+        </div>
+      </div>
+      <h1>eIAM - Explorarea Inteligenței Artificiale în Multimedia</h1>
+      <p>Acest portofoliu reprezintă o colecție diversificată de proiecte multimedia realizate cu ajutorul inteligenței artificiale, ilustrând modul în care tehnologia transformă și extinde posibilitățile creației artistice. Prin intermediul instrumentelor AI, am explorat noi modalități de a genera muzică originală, videoclipuri captivante și creații literare unice, care combină inovația tehnologică cu expresivitatea umană.</p>
+      <p>Fiecare proiect din această colecție este un exemplu al potențialului creativ al inteligenței artificiale de a sprijini și inspira artiștii și creatorii, deschizând noi perspective în domeniul multimedia. Acest demers pune în lumină modul în care AI poate fi folosită nu doar ca o unealtă tehnologică, ci și ca un partener colaborativ în procesul artistic, contribuind la dezvoltarea unor forme noi și captivante de expresie.</p>
+      <p>Prin această explorare, îmi propun să evidențiez impactul pe care inteligența artificială îl are în redefinirea granițelor artei digitale și să ofer o perspectivă asupra viitorului creativității multimedia, unde tehnologia și imaginația umană se întâlnesc pentru a da naștere unor experiențe inovatoare și memorabile.</p>
+    </main>
+<footer>
+  <audio id="bg-music" src="neon_reverie.mp3" loop></audio>
+
+  <button id="play-music" style="
+    z-index: 9999;
+    padding: 10px 300px;
+    font-size: 16px;
+    border-radius: 12px;
+    background-color: #AA5577;
+    color: white;
+    border: none;
+    cursor: pointer;
+  ">
+    ▶️ Pornește muzica
+  </button>
+
+<script>
+const music = document.getElementById('bg-music');
+const playBtn = document.getElementById('play-music');
+
+// Load saved state on page load
+window.addEventListener('load', () => {
+  const savedTime = localStorage.getItem('musicTime');
+  const wasPlaying = localStorage.getItem('musicPlaying') === 'true';
+
+  if (savedTime) {
+    music.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    music.play().catch(() => {
+      // Autoplay might be blocked, show play button
+      playBtn.style.display = 'inline-block';
+    });
+    playBtn.style.display = 'none';
+  } else {
+    playBtn.style.display = 'inline-block';
+  }
+});
+
+// Save current time and play state before unloading
+window.addEventListener('beforeunload', () => {
+  localStorage.setItem('musicTime', music.currentTime);
+  localStorage.setItem('musicPlaying', !music.paused);
+});
+
+// Play button click handler
+playBtn.addEventListener('click', () => {
+  music.play();
+  playBtn.style.display = 'none';
+});
+</script>
+
+  <a href="https://www.facebook.com/share/16w4p2KUcA" target="_blank">
+    <img src="facebook.svg" alt="Facebook" width="32" height="32">
+  </a>
+  <a href="https://www.instagram.com/claudiu.marusanici?igsh=a21zcWY1bTYxMzUz" target="_blank">
+    <img src="instagram.svg" alt="Instagram" width="32" height="32">
+  </a>
+  <a href="https://www.linkedin.com/in/claudiu-marusanici-771251145?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+    <img src="linkedin.svg" alt="LinkedIn" width="32" height="32">
+  </a>
+</footer>
+  </div>
+    <script>
+    const menuItems = document.querySelectorAll('#nav-menu li');
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        menuItems.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
